@@ -44,15 +44,15 @@ class _AssetFormScreenState extends State<AssetFormScreen> {
 
             if (state is AssetFormFailure) {
               final cause = state.exception.cause;
-              final errorMessage = cause is DioError
-                  ? cause.response?.data['message']
-                  : state.exception.message;
+              // final errorMessage = cause is DioError
+              //     ? cause.response?.data['message']
+              //     : state.exception.message;
 
-              await showOkAlertDialog(
-                context: context,
-                title: 'Unable to create asset',
-                message: errorMessage,
-              );
+              // await showOkAlertDialog(
+              //   context: context,
+              //   title: 'Unable to create asset',
+              //   message: errorMessage,
+              // );
             }
           },
           child: Builder(

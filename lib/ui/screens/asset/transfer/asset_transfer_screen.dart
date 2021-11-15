@@ -37,15 +37,15 @@ class _AssetTransferScreenState extends State<AssetTransferScreen> {
 
               if (state is AssetTransferFailure) {
                 final cause = state.exception.cause;
-                final errorMessage = cause is DioError
-                    ? cause.response?.data['message']
-                    : state.exception.message;
+                // final errorMessage = cause is DioError
+                //     ? cause.response?.data['message']
+                //     : state.exception.message;
 
-                await showOkAlertDialog(
-                  context: context,
-                  title: 'Unable to send asset',
-                  message: errorMessage,
-                );
+                // await showOkAlertDialog(
+                //   context: context,
+                //   title: 'Unable to send asset',
+                //   message: errorMessage,
+                // );
 
                 router.pop(context);
               }

@@ -26,12 +26,15 @@ class TransactionEvent extends Equatable {
   }) {
     final isAssetTransfer = transaction.assetTransferTransaction != null;
     final sender = transaction.sender;
-    final receiver = isAssetTransfer
-        ? transaction.assetTransferTransaction?.receiver
-        : transaction.payment?.receiver;
-    final amount = isAssetTransfer
-        ? transaction.assetTransferTransaction?.amount
-        : transaction.payment?.amount;
+    // final receiver = isAssetTransfer
+    //     ? transaction.assetTransferTransaction?.receiver
+    //     : transaction.payment?.receiver;
+    // final amount = isAssetTransfer
+    //     ? transaction.assetTransferTransaction?.amount
+    //     : transaction.payment?.amount;
+
+    final receiver = transaction.assetTransferTransaction?.receiver;
+    final amount = transaction.assetTransferTransaction?.amount;
 
     TransactionEventType type = TransactionEventType.UNKNOWN;
     if (sender == account.publicAddress && receiver == account.publicAddress) {

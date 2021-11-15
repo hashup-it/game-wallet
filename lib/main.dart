@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_algorand_wallet/database/entities.dart';
 import 'package:flutter_algorand_wallet/database/entities/account_entity.dart';

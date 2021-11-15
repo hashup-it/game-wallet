@@ -5,7 +5,7 @@ import 'package:flutter_algorand_wallet/ui/components/spacing.dart';
 class AlgorandBalance extends StatelessWidget {
   final String balance;
 
-  AlgorandBalance({required this.balance});
+  AlgorandBalance({ required this.balance });
 
   @override
   Widget build(BuildContext context) {
